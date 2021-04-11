@@ -49,7 +49,7 @@ public class GameOfDice {
             System.out.println("-> " + gamer.getPointsInOneGame());
         }
         Collections.sort(gamerList);
-        int max = gamerList.get(0).getPointsInOneGame();// С дополнительными переменными код по-моему более понятен
+        int max = gamerList.get(0).getPointsInOneGame();
         int countOfMax = (int) gamerList.stream().filter(x->x.getPointsInOneGame() == max).count();
         if (countOfMax > 1){
             System.out.println("У игроков одинаковое количество баллов, они же и прекидывают:");
@@ -73,10 +73,6 @@ public class GameOfDice {
             pointsInOneGame = 0;
         }
 
-        /*
-        * Обычно вместе с compareTo переопределяется и equals с hashcode,
-        * но для данной задачи достаточно явного сравнения "int-ов"
-        * */
         @Override
         public int compareTo(Gamer o) {
             return Integer.compare(o.pointsInOneGame, pointsInOneGame);
