@@ -16,7 +16,7 @@ public class GameOfDice {
     private static final Random RANDOM = new Random();
 
     /**
-     * Возможно авторы предпологали использование многопоточности в этой задаче.
+     * Возможно авторы предполагали использование многопоточности в этой задаче.
      * Каждый игрок - отдельный поток. Но игроки кидают кости по очереди, друг за другом,
      * с этим, как мне кажется справится и один поток.
      * Снова мало данных о задаче, поэтому предположим на вход поступает просто массив строк,
@@ -42,7 +42,6 @@ public class GameOfDice {
         for (Gamer gamer : gamerList){
             System.out.print("Игрок " + gamer.getName() + " кидает кости - ");
             for (int i = 0; i < countOfCubes; i++) {
-                //int pointsOneRoll = (int) (Math.random() * 6 + 1);
                 int pointsOneRoll = RANDOM.nextInt(6) + 1;
                 gamer.addPointsInOneGame(pointsOneRoll);
                 System.out.print(pointsOneRoll + " ");
