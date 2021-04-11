@@ -17,6 +17,7 @@ class HumanServiceTest {
 
     @Test
     void findHumansBySurname() {
+        System.out.println("findHumansBySurname TEST");
         System.out.println(humanService.findHumansBySurname("Ivanov"));
         System.out.println(humanService.findHumansBySurname(null));
         System.out.println(humanService.findHumansBySurname("fff"));
@@ -25,27 +26,32 @@ class HumanServiceTest {
 
     @Test
     void findHumansByAddress() {
+        System.out.println("findHumansByAddress TEST");
         System.out.println(humanService.findHumansByAddress(addressesArray[0]));
     }
 
     @Test
     void findHumansBetweenTwoData() {
+        System.out.println("findHumansBetweenTwoData TEST");
         System.out.println(humanService.findHumansBetweenTwoData(LocalDate.of(2001, 1, 1), LocalDate.of(1998, 1, 1)));
         System.out.println(humanService.findHumansBetweenTwoData(LocalDate.of(2050, 1, 1), LocalDate.of(2060, 1, 1)));
     }
 
     @Test
     void findOldestHuman() {
+        System.out.println("findOldestHuman TEST");
         System.out.println(humanService.findOldestHuman());
     }
 
     @Test
     void findYoungestHuman() {
+        System.out.println("findYoungestHuman TEST");
         System.out.println(humanService.findYoungestHuman());
     }
 
     @Test
     void findHumansByStreet() {
+        System.out.println("findHumansByStreet TEST");
         System.out.println(humanService.findHumansByStreet(addressesArray[0].getStreet()));
     }
 }
